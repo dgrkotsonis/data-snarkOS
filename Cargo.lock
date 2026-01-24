@@ -2591,6 +2591,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "locktick"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b203d5f7300c3e5775012b0fc5d3177552b0e55bb5ab3b532555eb33e31799b6"
+dependencies = [
+ "backtrace",
+ "parking_lot",
+ "simple_moving_average",
+]
+
+[[package]]
 name = "log"
 version = "0.4.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4372,7 +4383,7 @@ version = "4.4.0"
 dependencies = [
  "built",
  "clap",
- "locktick",
+ "locktick 0.4.0",
  "rusty-hook",
  "snarkos-account",
  "snarkos-cli",
@@ -4413,7 +4424,7 @@ dependencies = [
  "console-subscriber",
  "crossterm",
  "indexmap 2.13.0",
- "locktick",
+ "locktick 0.4.0",
  "nix 0.30.1",
  "num_cpus",
  "parking_lot",
@@ -4469,7 +4480,7 @@ dependencies = [
  "futures-util",
  "http 1.4.0",
  "indexmap 2.13.0",
- "locktick",
+ "locktick 0.4.0",
  "lru",
  "num_cpus",
  "parking_lot",
@@ -4515,7 +4526,7 @@ dependencies = [
  "futures",
  "indexmap 2.13.0",
  "itertools",
- "locktick",
+ "locktick 0.4.0",
  "lru",
  "mockall",
  "open",
@@ -4576,7 +4587,7 @@ dependencies = [
  "anyhow",
  "async-trait",
  "indexmap 2.13.0",
- "locktick",
+ "locktick 0.4.0",
  "parking_lot",
  "rand 0.8.5",
  "rayon",
@@ -4595,7 +4606,7 @@ dependencies = [
  "aleo-std",
  "anyhow",
  "indexmap 2.13.0",
- "locktick",
+ "locktick 0.4.0",
  "lru",
  "parking_lot",
  "snarkvm",
@@ -4610,7 +4621,7 @@ dependencies = [
  "bincode",
  "colored 3.1.1",
  "http 1.4.0",
- "locktick",
+ "locktick 0.4.0",
  "parking_lot",
  "rayon",
  "reqwest",
@@ -4633,7 +4644,7 @@ dependencies = [
  "colored 3.1.1",
  "indexmap 2.13.0",
  "itertools",
- "locktick",
+ "locktick 0.4.0",
  "lru",
  "once_cell",
  "parking_lot",
@@ -4654,7 +4665,7 @@ dependencies = [
 name = "snarkos-node-metrics"
 version = "4.4.0"
 dependencies = [
- "locktick",
+ "locktick 0.4.0",
  "metrics-exporter-prometheus",
  "parking_lot",
  "rayon",
@@ -4668,7 +4679,7 @@ version = "4.4.0"
 dependencies = [
  "anyhow",
  "built",
- "locktick",
+ "locktick 0.4.0",
  "parking_lot",
  "serde",
  "snarkos-node-network",
@@ -4690,7 +4701,7 @@ dependencies = [
  "http 1.4.0",
  "indexmap 2.13.0",
  "jsonwebtoken",
- "locktick",
+ "locktick 0.4.0",
  "once_cell",
  "parking_lot",
  "rand 0.8.5",
@@ -4723,7 +4734,7 @@ dependencies = [
  "futures",
  "futures-util",
  "linked-hash-map",
- "locktick",
+ "locktick 0.4.0",
  "parking_lot",
  "peak_alloc",
  "rand 0.8.5",
@@ -4771,7 +4782,7 @@ dependencies = [
  "futures",
  "indexmap 2.13.0",
  "itertools",
- "locktick",
+ "locktick 0.4.0",
  "parking_lot",
  "rand 0.8.5",
  "serde",
@@ -4816,7 +4827,7 @@ dependencies = [
  "async-trait",
  "bytes",
  "futures-util",
- "locktick",
+ "locktick 0.4.0",
  "once_cell",
  "parking_lot",
  "snarkos-node-metrics",
@@ -4831,7 +4842,7 @@ name = "snarkos-utilities"
 version = "4.2.1"
 dependencies = [
  "anyhow",
- "locktick",
+ "locktick 0.4.0",
  "parking_lot",
  "tokio",
  "tracing",
@@ -4840,7 +4851,7 @@ dependencies = [
 [[package]]
 name = "snarkvm"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "anyhow",
  "dotenvy",
@@ -4863,7 +4874,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-algorithms"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "anyhow",
@@ -4891,7 +4902,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-algorithms-cuda"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "blst",
  "cc",
@@ -4902,7 +4913,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-account",
  "snarkvm-circuit-algorithms",
@@ -4916,7 +4927,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-account"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-network",
  "snarkvm-circuit-types",
@@ -4926,7 +4937,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-algorithms"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-types",
  "snarkvm-console-algorithms",
@@ -4936,7 +4947,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-collections"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-algorithms",
  "snarkvm-circuit-types",
@@ -4946,7 +4957,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-environment"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "indexmap 2.13.0",
  "itertools",
@@ -4965,12 +4976,12 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-environment-witness"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 
 [[package]]
 name = "snarkvm-circuit-network"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-algorithms",
  "snarkvm-circuit-collections",
@@ -4981,7 +4992,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-program"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-account",
  "snarkvm-circuit-algorithms",
@@ -4995,7 +5006,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-types"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-environment",
  "snarkvm-circuit-types-address",
@@ -5010,7 +5021,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-types-address"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-environment",
  "snarkvm-circuit-types-boolean",
@@ -5023,7 +5034,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-types-boolean"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-environment",
  "snarkvm-console-types-boolean",
@@ -5032,7 +5043,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-types-field"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-environment",
  "snarkvm-circuit-types-boolean",
@@ -5042,7 +5053,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-types-group"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-environment",
  "snarkvm-circuit-types-boolean",
@@ -5054,7 +5065,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-types-integers"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-environment",
  "snarkvm-circuit-types-boolean",
@@ -5066,7 +5077,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-types-scalar"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-environment",
  "snarkvm-circuit-types-boolean",
@@ -5077,7 +5088,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-circuit-types-string"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-circuit-environment",
  "snarkvm-circuit-types-boolean",
@@ -5089,7 +5100,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-console-account",
  "snarkvm-console-algorithms",
@@ -5102,7 +5113,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-account"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "bs58",
  "snarkvm-console-network",
@@ -5113,7 +5124,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-algorithms"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "blake2s_simd",
  "hex",
@@ -5129,7 +5140,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-collections"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "rayon",
@@ -5141,7 +5152,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-network"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "anyhow",
  "enum-iterator",
@@ -5161,7 +5172,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-network-environment"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "anyhow",
  "bech32",
@@ -5179,7 +5190,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-program"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "enum-iterator",
  "enum_index",
@@ -5200,7 +5211,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-types"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-console-network-environment",
  "snarkvm-console-types-address",
@@ -5215,7 +5226,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-types-address"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-console-network-environment",
  "snarkvm-console-types-boolean",
@@ -5226,7 +5237,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-types-boolean"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-console-network-environment",
 ]
@@ -5234,7 +5245,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-types-field"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-console-network-environment",
  "snarkvm-console-types-boolean",
@@ -5244,7 +5255,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-types-group"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-console-network-environment",
  "snarkvm-console-types-boolean",
@@ -5255,7 +5266,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-types-integers"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-console-network-environment",
  "snarkvm-console-types-boolean",
@@ -5266,7 +5277,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-types-scalar"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-console-network-environment",
  "snarkvm-console-types-boolean",
@@ -5277,7 +5288,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-console-types-string"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-console-network-environment",
  "snarkvm-console-types-boolean",
@@ -5288,7 +5299,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-curves"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "rand 0.8.5",
  "rustc_version",
@@ -5301,7 +5312,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-fields"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "anyhow",
@@ -5318,12 +5329,12 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "anyhow",
  "indexmap 2.13.0",
- "locktick",
+ "locktick 0.5.0",
  "lru",
  "parking_lot",
  "rand 0.8.5",
@@ -5350,7 +5361,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-authority"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "anyhow",
  "rand 0.8.5",
@@ -5362,7 +5373,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-block"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "anyhow",
  "indexmap 2.13.0",
@@ -5384,7 +5395,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-committee"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "anyhow",
  "indexmap 2.13.0",
@@ -5403,7 +5414,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-narwhal"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-ledger-narwhal-batch-certificate",
  "snarkvm-ledger-narwhal-batch-header",
@@ -5416,7 +5427,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-narwhal-batch-certificate"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "indexmap 2.13.0",
  "rayon",
@@ -5429,7 +5440,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-narwhal-batch-header"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "indexmap 2.13.0",
  "rayon",
@@ -5442,7 +5453,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-narwhal-data"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "bytes",
  "serde_json",
@@ -5453,7 +5464,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-narwhal-subdag"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "indexmap 2.13.0",
  "rayon",
@@ -5468,7 +5479,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-narwhal-transmission"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "bytes",
  "serde_json",
@@ -5481,7 +5492,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-narwhal-transmission-id"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "snarkvm-console",
  "snarkvm-ledger-puzzle",
@@ -5490,13 +5501,13 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-puzzle"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "anyhow",
  "bincode",
  "indexmap 2.13.0",
- "locktick",
+ "locktick 0.5.0",
  "lru",
  "parking_lot",
  "rand 0.8.5",
@@ -5510,13 +5521,13 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-puzzle-epoch"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "anyhow",
  "colored 3.1.1",
  "indexmap 2.13.0",
- "locktick",
+ "locktick 0.5.0",
  "lru",
  "parking_lot",
  "rand 0.8.5",
@@ -5533,7 +5544,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-query"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -5550,13 +5561,13 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-store"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std-storage",
  "anyhow",
  "bincode",
  "indexmap 2.13.0",
- "locktick",
+ "locktick 0.5.0",
  "parking_lot",
  "rayon",
  "rocksdb",
@@ -5578,7 +5589,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-ledger-test-helpers"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "anyhow",
@@ -5596,7 +5607,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-metrics"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "metrics",
 ]
@@ -5604,7 +5615,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-parameters"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "anyhow",
@@ -5613,7 +5624,7 @@ dependencies = [
  "curl",
  "hex",
  "lazy_static",
- "locktick",
+ "locktick 0.5.0",
  "parking_lot",
  "paste",
  "rand 0.8.5",
@@ -5627,13 +5638,13 @@ dependencies = [
 [[package]]
 name = "snarkvm-synthesizer"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "anyhow",
  "indexmap 2.13.0",
  "itertools",
- "locktick",
+ "locktick 0.5.0",
  "lru",
  "parking_lot",
  "rand 0.8.5",
@@ -5663,7 +5674,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-synthesizer-error"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "anyhow",
  "snarkvm-circuit-environment",
@@ -5674,13 +5685,13 @@ dependencies = [
 [[package]]
 name = "snarkvm-synthesizer-process"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "anyhow",
  "colored 3.1.1",
  "indexmap 2.13.0",
- "locktick",
+ "locktick 0.5.0",
  "parking_lot",
  "rand 0.8.5",
  "rand_chacha 0.3.1",
@@ -5702,7 +5713,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-synthesizer-program"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "enum-iterator",
  "indexmap 2.13.0",
@@ -5723,7 +5734,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-synthesizer-snark"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "bincode",
  "serde_json",
@@ -5736,7 +5747,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-utilities"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "aleo-std",
  "anyhow",
@@ -5759,7 +5770,7 @@ dependencies = [
 [[package]]
 name = "snarkvm-utilities-derives"
 version = "4.4.0"
-source = "git+https://github.com/ProvableHQ/snarkVM.git?branch=fix%2Fatomic_prepare_next_block#50d913863513390b10bc45a3071bbbc2dc88ec4c"
+source = "git+https://github.com/kaimast/snarkVM.git?branch=feat%2Ftry-get-transaction#9de5d00cc07a53d9e4f21d9e2bdb89a7c97d31a0"
 dependencies = [
  "proc-macro2",
  "quote 1.0.44",

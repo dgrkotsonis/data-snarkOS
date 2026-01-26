@@ -96,7 +96,7 @@ version = "0.3"
 version = "0.3"
 
 [workspace.dependencies.locktick]
-version = "0.4"
+version = "0.5"
 
 [workspace.dependencies.lru]
 version = "0.16"
@@ -307,7 +307,7 @@ workspace = true
 features = [ "derive" ]
 
 [dependencies.locktick]
-version = "0.4"
+version = "0.5"
 optional = true
 
 [dependencies.snarkos-account]
@@ -407,6 +407,3 @@ ignored = [
   "snarkos-node-router", # Needed for cuda and locktick features
   "snarkos-node-metrics", # Needed for locktick feature
 ]
-
-[patch.crates-io]
-locktick = { git="https://github.com/kaimast/locktick.git", branch="feat/lazy-lock" }

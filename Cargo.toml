@@ -48,9 +48,12 @@ default-features = false
 [workspace.dependencies.snarkvm]
 #path = "../snarkVM"
 git = "https://github.com/ProvableHQ/snarkVM.git"
-rev = "4ba40d3"
-#version = "=4.5.0"
+branch = "stream_plugin_testing"
 default-features = false
+
+[workspace.dependencies.snarkvm-slipstream-plugin-manager]
+git = "https://github.com/ProvableHQ/snarkVM.git"
+branch = "stream_plugin_testing"
 
 [workspace.dependencies.anyhow]
 version = "1.0"

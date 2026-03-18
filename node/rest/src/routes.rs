@@ -1065,8 +1065,7 @@ impl<N: Network, C: ConsensusStorage<N>, R: Routing<N>> Rest<N, C, R> {
             .slipstream_plugin_manager()
             .ok_or_else(|| RestError::service_unavailable(anyhow!("No Slipstream plugin manager is installed")))?;
         let name = tokio::task::spawn_blocking(move || -> anyhow::Result<String> {
-            let mut mgr =
-                manager.write().map_err(|e| anyhow!("Plugin manager lock poisoned: {e}"))?;
+            let mut mgr = manager.write().map_err(|e| anyhow!("Plugin manager lock poisoned: {e}"))?;
             mgr.load_plugin(&config_file).map_err(|e: SlipstreamPluginManagerError| match e {
                 SlipstreamPluginManagerError::PluginAlreadyLoaded(_) => anyhow!("409: {e}"),
                 other => anyhow!("{other}"),
@@ -1100,8 +1099,7 @@ impl<N: Network, C: ConsensusStorage<N>, R: Routing<N>> Rest<N, C, R> {
             .slipstream_plugin_manager()
             .ok_or_else(|| RestError::service_unavailable(anyhow!("No Slipstream plugin manager is installed")))?;
         tokio::task::spawn_blocking(move || -> anyhow::Result<()> {
-            let mut mgr =
-                manager.write().map_err(|e| anyhow!("Plugin manager lock poisoned: {e}"))?;
+            let mut mgr = manager.write().map_err(|e| anyhow!("Plugin manager lock poisoned: {e}"))?;
             mgr.unload_plugin(&name).map_err(|e: SlipstreamPluginManagerError| match e {
                 SlipstreamPluginManagerError::PluginNotLoaded(_) => anyhow!("404: {e}"),
                 other => anyhow!("{other}"),
@@ -1141,8 +1139,7 @@ impl<N: Network, C: ConsensusStorage<N>, R: Routing<N>> Rest<N, C, R> {
             .slipstream_plugin_manager()
             .ok_or_else(|| RestError::service_unavailable(anyhow!("No Slipstream plugin manager is installed")))?;
         tokio::task::spawn_blocking(move || -> anyhow::Result<()> {
-            let mut mgr =
-                manager.write().map_err(|e| anyhow!("Plugin manager lock poisoned: {e}"))?;
+            let mut mgr = manager.write().map_err(|e| anyhow!("Plugin manager lock poisoned: {e}"))?;
             mgr.reload_plugin(&name, &config_file).map_err(|e: SlipstreamPluginManagerError| match e {
                 SlipstreamPluginManagerError::PluginNotLoaded(_) => anyhow!("404: {e}"),
                 other => anyhow!("{other}"),

@@ -978,7 +978,7 @@ impl<N: Network, C: ConsensusStorage<N>, R: Routing<N>> Rest<N, C, R> {
     #[cfg(feature = "history")]
     pub(crate) async fn get_history_old(
         State(rest): State<Self>,
-        Path((program_id, mapping_name, mapping_key, height)): Path<HistoricalMappingKey<N>>,
+        Path((height, mapping)): Path<(u32, snarkvm::synthesizer::MappingName)>,
     ) -> Result<impl axum::response::IntoResponse, RestError> {
         let history = snarkvm::synthesizer::History::new(N::ID, rest.ledger.vm().finalize_store().storage_mode());
         let result = history.load_mapping(height, mapping).map_err(|err| {

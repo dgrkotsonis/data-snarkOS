@@ -973,6 +973,21 @@ impl<N: Network, C: ConsensusStorage<N>, R: Routing<N>> Rest<N, C, R> {
         Ok((StatusCode::OK, ErasedJson::pretty(value)))
     }
 
+    /// OLD (FORKED) ENDPOINT
+    /// GET /{network}/block/{blockHeight}/history/{mapping}
+    #[cfg(feature = "history")]
+    pub(crate) async fn get_history_old(
+        State(rest): State<Self>,
+        Path((program_id, mapping_name, mapping_key, height)): Path<HistoricalMappingKey<N>>,
+    ) -> Result<impl axum::response::IntoResponse, RestError> {
+        let history = snarkvm::synthesizer::History::new(N::ID, rest.ledger.vm().finalize_store().storage_mode());
+        let result = history.load_mapping(height, mapping).map_err(|err| {
+            RestError::not_found(err.context(format!("Could not load mapping '{mapping}' from block '{height}'")))
+        })?;
+
+        Ok((StatusCode::OK, [(CONTENT_TYPE, "application/json")], result))
+    }
+
     /// GET /{network}/staking/rewards/{address}/{height}
     #[cfg(feature = "history-staking-rewards")]
     pub(crate) async fn get_staking_reward(

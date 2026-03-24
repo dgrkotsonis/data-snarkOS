@@ -260,7 +260,7 @@ impl<N: Network, C: ConsensusStorage<N>, R: Routing<N>> Rest<N, C, R> {
 
         // If the `history` feature is enabled, enable the old staking endpoint (specific to fork).
         #[cfg(feature = "history")]
-        let routes = routes.route("/{network}/block/{blockHeight}/history/{mapping}", get(Self::get_history_old));
+        let routes = routes.route("/block/{blockHeight}/history/{mapping}", get(Self::get_history_old));
 
         // If the `history-staking-rewards` feature is enabled, enable the additional endpoint.
         #[cfg(feature = "history-staking-rewards")]

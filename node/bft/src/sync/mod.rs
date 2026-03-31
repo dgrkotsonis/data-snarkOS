@@ -353,9 +353,8 @@ impl<N: Network> Sync<N> {
             }
         }
 
-        // Do not attempt to sync if there are no blocks to sync.
-        // This prevents redundant log messages and performing unnecessary computation.
-        if !self.block_sync.can_block_sync() {
+        // Do not attempt to sync if there are no blocks to sync, or we are too close to the tip.
+        if self.is_synced() {
             return;
         }
 
@@ -392,7 +391,7 @@ impl<N: Network> Sync<N> {
         peer_ip: SocketAddr,
         blocks: Vec<Block<N>>,
         latest_consensus_version: Option<ConsensusVersion>,
-    ) -> Result<(), InsertBlockResponseError> {
+    ) -> Result<(), InsertBlockResponseError<N>> {
         self.block_sync.insert_block_responses(peer_ip, blocks, latest_consensus_version)
 
         // No need to advance block sync here, as the new response will

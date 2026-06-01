@@ -1112,6 +1112,7 @@ impl<N: Network, C: ConsensusStorage<N>, R: Routing<N>> Rest<N, C, R> {
         })?;
 
         Ok((StatusCode::OK, [(CONTENT_TYPE, "application/json")], result))
+    }
 
     /// GET /{network}/program/{id}/mapping/{name}/history/{height}?keys=key1,key2,...
     #[cfg(feature = "history")]
